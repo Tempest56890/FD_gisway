@@ -39,6 +39,7 @@ for mtr in X_:
     for i in range(window_size):
         for j in range(lll):
             mtr[i,j]=(mtr[i,j]-x_mean[j])/math.sqrt(x_var[j])
+#X_=[X_[-1]]
 X_=tf.cast(X_,tf.float32)
 prd=mymodel(X_)
 prd=np.array(prd)
